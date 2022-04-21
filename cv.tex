@@ -1,0 +1,145 @@
+\documentclass{cv}
+
+\begin{document}
+
+\header{Stanisław Nieradko}
+
+\vspace{10pt}
+
+\contacts{
+    \contactitem{icons/github.png}{https://github.com/KanarekLife}{https://github.com/KanarekLife}
+    \contactitem{icons/mail.png}{mailto:stanislaw@nieradko.com}{stanislaw@nieradko.com}
+    \contactitem{icons/phone.png}{tel:+48506257727}{+48 506 257 727}
+}
+
+\vspace{10pt}
+
+\main{
+    \section{Projects}{
+      \project{SSGP}{C\#, ASP.Net Core}{2022}{https://github.com/KanarekLife/SSGP}{
+          Currently in my free time I'm working on a platform which is intended to connect ambitious high-school students with companies looking for interns.
+      }
+
+      \project{eru}{C\#, ASP.Net Core}{2020}{https://github.com/xxlo-devs/eru}{
+          Application developed to send notifications to students of our high school about changes in timetable via website and Facebook Messenger.
+          Among other things I built application's front-end web page, XML parser for substitutions,
+          prepared underlying database and connected it to application with EF Core.
+      }
+
+      \project{JedzenioPlanner}{C\#, ASP.Net Core}{2020}{https://github.com/JedzenioPlanner}{
+          Application allowed to generate daily diet based on number of meals and target sum of daily calories.
+          Moreover application enabled users to share and find recepis of healthy meals.
+          I assembled a team for this project and it was later sent for Hack Heroes 2020 hackathon.
+          In backend part of the project, I have designed its domain, set up the authentication with auth0 and built docker image for easier deployments.
+      }
+
+      \project{WokLearner}{C\#, ASP.Net Core}{2020}{https://github.com/KanarekLife?tab=repository\&q=WokLearner}{
+          Application was built to help with studying for final art's exam from paintings recognition.
+          Application included paintings gallery and quiz mode which remembered which paintings were already learnt by the user.
+          I have built the application's backend from scratch which included authentication based on Identity Framework and JWT.
+      }
+
+      \project{SuperGamblino}{C\#, DSharpPlus}{2020}{https://github.com/SuperGamblino/SuperGamblino}{
+          Discord bot that allows to play few casino games directly on any discord server.
+          While I was working on a project I created a docker image for easier deployments and cleaned up its architecture by introducing dependency injection and fixing SOLID violations.
+          Moreover I enchanced the project's documentation and its user experience.
+      }
+
+      \project{proxmox-idmap-helper}{Svelte, Proxmox, TypeScript}{2021}{https://proxmox-idmap-helper.nieradko.com}{
+          Small web application, written in Svelte, that helps with configuration of correct LXC.idmap commands.
+          I have built it when I was trying to share my Intel IGPU in my homelab server between host and LXC container with Jellyfish.
+      }
+     }
+
+    \section{Awards}{
+      \award{HackHeroes}{2\textsuperscript{nd} place}{2020}{
+          I coordinated a team of 4 people in building a JedzenioPlanner project for a HackHeroes 2020 hackathon.
+          During the project I assembled the team, divided tasks and co-developed its back-end.
+          Project took a 2nd place, despite a record number of competitors from all over Poland.
+      }
+     }
+}{
+    \section{Skills}{
+      \skill{.NET}{
+          \skills{Proficient}{
+              \begin{itemize}
+                  \item C\#
+                  \item ASP.NET Core
+                  \item Entity Framework Core
+                  \item REST API Design
+              \end{itemize}
+          }
+          \skills{Familiar}{
+              \begin{itemize}
+                  \item SOLID Principles
+                  \item OOP Design Patterns
+                  \item Clean Code
+                  \item Clean Architecture
+                  \item DDD
+                  \item N-Tier Architecture
+                  \item Unit and Integration Testing
+              \end{itemize}
+          }
+      }
+
+      \skill{Front-end}{
+          \skills{Familiar}{
+              \begin{itemize}
+                  \item Semantic HTML
+                  \item CSS
+                  \item JavaScript
+                  \item TypeScript
+                  \item Svelte
+              \end{itemize}
+          }
+      }
+
+      \skill{Other}{
+          \skills{Languages}{
+              \begin{itemize}
+                  \item Polish (native)
+                  \item English (FCE - C1)
+              \end{itemize}
+          }
+          \skills{Familiar}{
+              \begin{itemize}
+                  \item Git
+                  \item SQL (mostly SQLite)
+                  \item NodeJS
+                  \item Linux Server Administration
+                  \item Ansible
+                  \item Docker
+                  \item Proxmox
+                  \item Python
+                  \item PowerShell
+                  \item CI / CD (mostly GitHub Actions)
+                  \item \LaTeX
+              \end{itemize}
+          }
+      }
+
+      \skill{Soft Skills}{
+          \begin{itemize}
+              \item Good at teamwork
+              \item Creative
+              \item Up to date with current trends
+              \item Willing to learn
+              \item Experienced in working in small groups (2 - 4 people)
+          \end{itemize}
+      }
+     }
+    \section{Education}{
+      \school{XX Liceum Ogólnokształcące im. Zbigniewa Herberta}{Sep 2019 - Present}{Gdańsk, Poland}
+     }
+    \section{Interests}{
+      Homelabs, Gaming, Programming
+     }
+}
+
+\sep
+
+\rodo{
+    Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji (zgodnie z ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. Ustaw z 2018, poz. 1000) oraz zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO).
+}
+
+\end{document}
