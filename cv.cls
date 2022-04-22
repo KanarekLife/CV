@@ -45,6 +45,7 @@
     BoldFont = *-Bold,
     ItalicFont = *-Italic,
     BoldItalicFont = *-BoldItalic,
+    FontFace = {l}{n}{*-Light}
 ]
 
 % Colors %
@@ -88,6 +89,7 @@
     {
         \color{main}
         \raggedleft
+        \fontseries{l}
         \headersize
         #1
     }
