@@ -14,7 +14,7 @@ jobs:
      - name: Build
        run: xelatex cv.tex
      - name: Upload artifact
-       uses: actions/upload-artifact
+       uses: actions/upload-artifact@v3
        with:
         name: output
         path: cv.pdf
