@@ -1,0 +1,20 @@
+name: Build
+on:
+  push:
+    branches:
+      - "main"
+jobs:
+  build:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Checkout code
+       uses: actions/checkout@v3
+     - name: Install dependencies
+       run: sudo apt-get install texlive-xetex -y
+     - name: Build
+       run: xelatex cv.tex
+     - name: Upload artifact
+       uses: actions/upload-artifact
+       with:
+        name: output
+        path: cv.pdf

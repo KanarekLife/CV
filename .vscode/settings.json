@@ -7,5 +7,8 @@
             ]
         }
     ],
-    "latex-workshop.latex.recipe.default": "xelatex"
+    "latex-workshop.latex.recipe.default": "xelatex",
+    "yaml.schemas": {
+        "https://json.schemastore.org/github-workflow.json": "file:///d%3A/Projects/cv-2/.github/workflows/build.yml"
+    }
 }
