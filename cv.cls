@@ -174,9 +174,9 @@
 \newcommand{\school}[3]{
     \sep
 
-    \cvTitle{#1} \cvYear{#2}
+    {\cvTitle{#1} \cvYear{#2}}
     
-    \textit{#3}
+    {\vspace{-10pt}\noindent #3}
 
     \sep
 }
