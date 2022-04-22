@@ -2,7 +2,21 @@
 \NeedsTeXFormat{LaTeX2e}
 
 % Basic setup %
+% Font Sizes %
 \renewcommand{\normalsize}{\fontsize{9pt}{10pt}\selectfont}
+\newcommand{\large}{\fontsize{10pt}{10pt}\selectfont}
+\newcommand{\Large}{\fontsize{15pt}{10pt}\selectfont}
+\newcommand{\footnotesize}{\fontsize{7pt}{5pt}\selectfont}
+\newcommand{\headersize}{\fontsize{36pt}{24pt}\selectfont}
+% Required by enumitem %
+\newcommand{\Huge}{\normalsize}
+\newcommand{\huge}{\normalsize}
+\newcommand{\LARGE}{\normalsize}
+\newcommand{\small}{\normalsize}
+\newcommand{\tiny}{\normalsize}
+\newcommand{\scriptsize}{\normalsize}
+\newenvironment{description}{}{}
+% Required by hyperref
 \newcommand{\thepage}{1}
 
 % Packages %
@@ -12,6 +26,17 @@
 \usepackage{graphicx}
 \usepackage{graphbox}
 \usepackage{xcolor}
+\usepackage{enumitem}
+
+% Hyperref setup %
+\hypersetup{
+    pdftitle={Stanisław Nieradko's CV},
+    pdfauthor={Stanisław Nieradko}
+}
+
+% Lists setup %
+\newcommand{\cvLabel}{$\triangleright$\hspace{5pt}}
+\setlist[itemize]{label=\cvLabel, leftmargin=*}
 
 % Fonts %
 \setmainfont[ExternalLocation=fonts/open_sans/]{OpenSans}[
@@ -21,14 +46,6 @@
     ItalicFont = *-Italic,
     BoldItalicFont = *-BoldItalic,
 ]
-
-% Font Sizes %
-
-\renewcommand{\normalsize}{\fontsize{9pt}{10pt}\selectfont}
-\newcommand{\large}{\fontsize{10pt}{10pt}\selectfont}
-\newcommand{\Large}{\fontsize{15pt}{10pt}\selectfont}
-\newcommand{\tiny}{\fontsize{7pt}{5pt}\selectfont}
-\newcommand{\headersize}{\fontsize{36pt}{24pt}\selectfont}
 
 % Colors %
 
@@ -115,30 +132,30 @@
     \sep
 }
 
+\newcommand{\cvElementHeader}[3]{
+    \cvTitle{#1} \cvDetails{#2} \hfill \cvYear{#3}
+}
+
 \newcommand{\project}[5]{
     \sep
     
-    \cvTitle{#1} \cvDetails{#2}
+    \cvElementHeader{#1}{#2}{#3}
 
     {\href{#4}{#4}}
 
-    \cvYear{#3}
-
     \sep
 
-    {#5}
+    {\cvLabel #5}
 }
 
 \newcommand{\award}[4]{
     \sep
 
-    \cvTitle{#1} \cvDetails{#2}
-
-    \cvYear{#3}
+    \cvElementHeader{#1}{#2}{#3}
 
     \sep
 
-    {#4}
+    {\cvLabel #4}
 }
 
 \newcommand{\skill}[2]{
@@ -162,11 +179,7 @@
 \newcommand{\school}[3]{
     \sep
 
-    \cvTitle{#1}
-
-    \msep
-
-    {#2}
+    \cvTitle{#1} \cvYear{#2}
     
     \textit{#3}
 
@@ -175,6 +188,6 @@
 
 \newcommand{\rodo}[1]{
     \raggedright
-    \tiny
+    \footnotesize
     #1
 }
