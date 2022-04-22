@@ -28,4 +28,4 @@ Fonts are downloaded from [fonts.google.com](https://fonts.google.com/).
 
 Used fonts:
 
-- [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+- [Inter](https://fonts.google.com/specimen/Inter)

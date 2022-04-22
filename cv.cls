@@ -38,13 +38,12 @@
 \newcommand{\cvLabel}{$\triangleright$\hspace{5pt}}
 \setlist[itemize]{label=\cvLabel, leftmargin=*}
 
-% Fonts %
-\setmainfont[ExternalLocation=fonts/open_sans/]{OpenSans}[
+\setmainfont[ExternalLocation=fonts/inter/]{Inter}[
     Extension = .ttf,
     UprightFont = *-Regular,
     BoldFont = *-Bold,
-    ItalicFont = *-Italic,
-    BoldItalicFont = *-BoldItalic,
+    ItalicFont = *-Regular,
+    BoldItalicFont = *-Bold,
     FontFace = {l}{n}{*-Light}
 ]
 
@@ -68,13 +67,7 @@
 \newcommand{\cvYear}[1]{
     {
         \color{yearColor}
-        \textbf{\textit{#1}}
-    }
-}
-
-\newcommand{\cvDetails}[1]{
-    {
-        \textit{#1}
+        \textbf{#1}
     }
 }
 
@@ -135,7 +128,7 @@
 }
 
 \newcommand{\cvElementHeader}[3]{
-    \cvTitle{#1} \cvDetails{#2} \hfill \cvYear{#3}
+    \cvTitle{#1} #2 \hfill \cvYear{#3}
 }
 
 \newcommand{\project}[5]{
@@ -169,7 +162,7 @@
 \newcommand{\skills}[2]{
     \vspace{1pt}
 
-    {\textbf{#1:}}
+    {\color{yearColor}\textbf{#1:}}
 
     \msep
 
