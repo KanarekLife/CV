@@ -176,7 +176,7 @@
 
     {\cvTitle{#1} \cvYear{#2}}
     
-    {\vspace{-10pt}\noindent #3}
+    {#3}
 
     \sep
 }
