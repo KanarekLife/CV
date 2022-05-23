@@ -2,6 +2,7 @@
 \NeedsTeXFormat{LaTeX2e}
 
 % Basic setup %
+\setlength{\parindent}{0pt}
 % Font Sizes %
 \renewcommand{\normalsize}{\fontsize{9pt}{10pt}\selectfont}
 \newcommand{\large}{\fontsize{10pt}{10pt}\selectfont}
@@ -17,7 +18,7 @@
 \newcommand{\scriptsize}{\normalsize}
 \newenvironment{description}{}{}
 % Required by hyperref
-\newcommand{\thepage}{1}
+\pagenumbering{arabic}
 
 % Packages %
 \usepackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
@@ -81,7 +82,6 @@
 \newcommand{\header}[1]{
     {
         \color{main}
-        \raggedleft
         \fontseries{l}
         \headersize
         #1
@@ -95,15 +95,7 @@
     }
 }
 
-\newcommand{\contacts}[1]{
-    {
-        \raggedleft
-        #1
-    }
-}
-
 \newcommand{\main}[2]{
-    \noindent
     \begin{minipage}[t]{.7\linewidth}
         #1
     \end{minipage}
@@ -113,7 +105,7 @@
     \end{minipage}
 }
 
-\newcommand{\section}[2]{
+\newcommand{\section}[1]{
     {
         \color{main}
         \Large
@@ -121,10 +113,6 @@
     }
 
     \msep
-
-    {#2}
-
-    \sep
 }
 
 \newcommand{\cvElementHeader}[3]{
@@ -182,7 +170,6 @@
 }
 
 \newcommand{\rodo}[1]{
-    \raggedright
     \footnotesize
     #1
 }
