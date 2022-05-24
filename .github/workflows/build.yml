@@ -12,9 +12,9 @@ jobs:
       - name: Install dependencies
         run: sudo apt-get install texlive-xetex -y
       - name: Build
-        run: xelatex -jobname="Stanisław's Nieradko CV" cv.tex
+        run: xelatex -jobname="Stanisław Nieradko's CV" cv.tex
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: output
-          path: cv.pdf
+          path: "Stanisław Nieradko's CV.pdf"
