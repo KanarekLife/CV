@@ -18,7 +18,7 @@
 
 \RequirePackage[english]{babel}
 \RequirePackage[utf8]{inputenc}
-\RequirePackage[a4paper, margin=.5cm]{geometry}
+\RequirePackage[a4paper, margin=.8cm]{geometry}
 \RequirePackage{fontspec}
 \RequirePackage[hidelinks]{hyperref}
 \RequirePackage{xcolor}
