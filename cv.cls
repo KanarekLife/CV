@@ -26,6 +26,18 @@
 \RequirePackage{graphicx}
 \RequirePackage{graphbox}
 
+% PDF settings %
+
+\newcommand{\setupPDF}{
+    \hypersetup{
+        pdfinfo={
+            Title={\pdfTitle},
+            Author={\pdfAuthor},
+            Creator={Stanisław Nieradko's CV Template}
+        }
+    }
+}
+
 % Settings %
 
 \setlength{\parindent}{0pt}
@@ -44,6 +56,11 @@
     BoldFont = *-Bold,
     ItalicFont = *-Italic,
     BoldItalicFont = *-BoldItalic
+]
+
+\setmonofont[ExternalLocation=fonts/oxygen/]{OxygenMono}[
+    Extension = .ttf,
+    UprightFont = *-Regular
 ]
 
 % Colors %
@@ -65,17 +82,17 @@
 
 \newcommand{\github}[1]{{
     \includegraphics[width=20pt, align=c]{icons/github.png}
-    \href{#1}{#1}
+    \href{#1}{\texttt{#1}}
 }}
 
 \newcommand{\phone}[2]{{
     \includegraphics[width=20pt, align=c]{icons/phone.png}
-    \href{#2}{#1}
+    \href{#2}{\texttt{#1}}
 }}
 
 \newcommand{\email}[2]{{
     \includegraphics[width=20pt, align=c]{icons/email.png}
-    \href{#2}{#1}
+    \href{#2}{\texttt{#1}}
 }}
 
 \newcommand{\section}[1]{{
@@ -86,15 +103,15 @@
 }}
 
 \newcommand{\subsection}[1]{{
-    \fontsize{14pt}{16.8pt}
+    \fontsize{13pt}{15.6pt}
     \selectfont
     #1
 }}
 
 \newcommand{\subsubsection}[1]{{
-    \fontsize{12pt}{14.4pt}
+    \fontsize{11pt}{13.2pt}
     \selectfont
-    #1
+    \textit{#1}
 }}
 
 \newcommand{\project}[5]{{
@@ -104,9 +121,8 @@
     \hfill
     #3
 
-    \vspace{-3pt}
+    \vspace{-4pt}
     \href{#4}{#4}
-    \vspace{-3pt}
 
     #5
 }}
@@ -117,7 +133,7 @@
     \hfill
     #2
 
-    \vspace{-3pt}
+    \vspace{-4pt}
     \hspace{6pt}
     \textit{#3}
 }}
