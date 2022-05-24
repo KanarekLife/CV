@@ -117,6 +117,7 @@
 \newcommand{\project}[5]{{
     \listLabel
     \textbf{#1}
+    \hspace{3pt}
     #2
     \hfill
     #3
@@ -141,6 +142,7 @@
 \newcommand{\award}[4]{
     \listLabel
     \textbf{#1}
+    \hspace{3pt}
     #2
     \hfill
     #3
