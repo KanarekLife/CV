@@ -5,16 +5,16 @@ on:
       - "main"
 jobs:
   build:
-   runs-on: ubuntu-latest
-   steps:
-     - name: Checkout code
-       uses: actions/checkout@v3
-     - name: Install dependencies
-       run: sudo apt-get install texlive-xetex -y
-     - name: Build
-       run: xelatex cv.tex
-     - name: Upload artifact
-       uses: actions/upload-artifact@v3
-       with:
-        name: output
-        path: cv.pdf
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: sudo apt-get install texlive-xetex -y
+      - name: Build
+        run: xelatex --job-name="Stanisław's Nieradko CV" cv.tex
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: output
+          path: cv.pdf
