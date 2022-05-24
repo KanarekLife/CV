@@ -38,8 +38,7 @@
 
 % Fonts %
 
-\setmainfont{Montserrat}[
-    ExternalLocation = fonts/Montserrat/,
+\setmainfont[ExternalLocation=fonts/montserrat/]{Montserrat}[
     Extension = .ttf,
     UprightFont = *-Regular,
     BoldFont = *-Bold,
