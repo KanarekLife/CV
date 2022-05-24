@@ -16,11 +16,7 @@ Best way to edit this template is to use `vscode` with `vscode-latex-workshop` e
 
 ### Icons
 
-Icons are downloaded from [svgrepo.com](https://www.svgrepo.com).
-
-Used icon packs:
-
-- [Unicons Line Icons](https://www.svgrepo.com/collection/unicons-line-icons/1)
+Icons are downloaded from [pngrepo.com](https://www.pngrepo.com).
 
 ### Fonts
 
@@ -28,4 +24,4 @@ Fonts are downloaded from [fonts.google.com](https://fonts.google.com/).
 
 Used fonts:
 
-- [Inter](https://fonts.google.com/specimen/Inter)
+- [Montserrat](https://fonts.google.com/specimen/Montserrat)

@@ -1,175 +1,140 @@
-\ProvidesClass{cv}[2022/04/21 cv]
 \NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{cv}[2022/05/24 Stanisław Nieradko's CV class]
 
-% Basic setup %
-\setlength{\parindent}{0pt}
-% Font Sizes %
-\renewcommand{\normalsize}{\fontsize{9pt}{10pt}\selectfont}
-\newcommand{\large}{\fontsize{10pt}{10pt}\selectfont}
-\newcommand{\Large}{\fontsize{15pt}{10pt}\selectfont}
-\newcommand{\footnotesize}{\fontsize{7pt}{5pt}\selectfont}
-\newcommand{\headersize}{\fontsize{36pt}{24pt}\selectfont}
-% Required by enumitem %
+\renewcommand{\normalsize}{\fontsize{10pt}{12pt}\selectfont}
+\pagenumbering{arabic}
+\newcommand{\large}{\normalsize}
+\newcommand{\Large}{\normalsize}
 \newcommand{\Huge}{\normalsize}
 \newcommand{\huge}{\normalsize}
 \newcommand{\LARGE}{\normalsize}
-\newcommand{\small}{\normalsize}
 \newcommand{\tiny}{\normalsize}
+\newcommand{\small}{\normalsize}
 \newcommand{\scriptsize}{\normalsize}
-\newenvironment{description}{}{}
-% Required by hyperref
-\pagenumbering{arabic}
+\newcommand{\footnotesize}{\normalsize}
+\newcommand{\description}{}
 
 % Packages %
-\usepackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
-\usepackage{fontspec}
-\usepackage[hidelinks]{hyperref}
-\usepackage{graphicx}
-\usepackage{graphbox}
-\usepackage{xcolor}
-\usepackage{enumitem}
 
-% Hyperref setup %
-\hypersetup{
-    pdftitle={Stanisław Nieradko's CV},
-    pdfauthor={Stanisław Nieradko}
+\RequirePackage[english]{babel}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[a4paper, margin=.5cm]{geometry}
+\RequirePackage{fontspec}
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage{xcolor}
+\RequirePackage{enumitem}
+\RequirePackage{graphicx}
+\RequirePackage{graphbox}
+
+% Settings %
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+
+\newcommand{\@minipagerestore}{
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{5pt}
 }
 
-% Lists setup %
-\newcommand{\cvLabel}{$\triangleright$\hspace{5pt}}
-\setlist[itemize]{label=\cvLabel, leftmargin=*}
+% Fonts %
 
-\setmainfont[ExternalLocation=fonts/inter/]{Inter}[
+\setmainfont{Montserrat}[
+    ExternalLocation = fonts/Montserrat/,
     Extension = .ttf,
     UprightFont = *-Regular,
     BoldFont = *-Bold,
-    ItalicFont = *-Regular,
-    BoldItalicFont = *-Bold,
-    FontFace = {l}{n}{*-Light}
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-BoldItalic
 ]
 
 % Colors %
 
-\definecolor{yearColor}{HTML}{808080}
-\definecolor{main}{HTML}{1D76E2}
+\definecolor{accentColor}{HTML}{1D76E2}
 
-% New Commands %
+% Lists %
+\newcommand{\listLabel}{$\circ$ \hspace{5pt}}
+\setlist[itemize]{label=\listLabel, leftmargin=*}
 
-% Separator %
-\newcommand{\sep}{
-    \vspace{5pt}
-}
+% Commands %
 
-% Mini Separator %
-\newcommand{\msep}{
-    \vspace{3pt}
-}
+\newcommand{\header}[1]{{
+    \color{accentColor}
+    \fontsize{36pt}{43.2pt}
+    \selectfont
+    #1
+}}
 
-\newcommand{\cvYear}[1]{
-    {
-        \color{yearColor}
-        \textbf{#1}
-    }
-}
+\newcommand{\github}[1]{{
+    \includegraphics[width=20pt, align=c]{icons/github.png}
+    \href{#1}{#1}
+}}
 
-\newcommand{\cvTitle}[1]{
-    {
-        \large
-        \textbf{#1}
-    }
-}
+\newcommand{\phone}[2]{{
+    \includegraphics[width=20pt, align=c]{icons/phone.png}
+    \href{#2}{#1}
+}}
 
-\newcommand{\header}[1]{
-    {
-        \color{main}
-        \fontseries{l}
-        \headersize
-        #1
-    }
-}
+\newcommand{\email}[2]{{
+    \includegraphics[width=20pt, align=c]{icons/email.png}
+    \href{#2}{#1}
+}}
 
-\newcommand{\contactitem}[3]{
-    \href{#2}{
-        \includegraphics[align=c, vshift=.05cm, width=.8cm, height=.8cm]{#1}
-        \large #3
-    }
-}
+\newcommand{\section}[1]{{
+    \color{accentColor}
+    \fontsize{16pt}{19.2pt}
+    \selectfont
+    #1
+}}
 
-\newcommand{\main}[2]{
-    \begin{minipage}[t]{.7\linewidth}
-        #1
-    \end{minipage}
-    \hspace{.5cm}
-    \begin{minipage}[t]{.3\linewidth}
-        #2
-    \end{minipage}
-}
+\newcommand{\subsection}[1]{{
+    \fontsize{14pt}{16.8pt}
+    \selectfont
+    #1
+}}
 
-\newcommand{\section}[1]{
-    {
-        \color{main}
-        \Large
-        \textbf{#1}
-    }
+\newcommand{\subsubsection}[1]{{
+    \fontsize{12pt}{14.4pt}
+    \selectfont
+    #1
+}}
 
-    \msep
-}
+\newcommand{\project}[5]{{
+    \listLabel
+    \textbf{#1}
+    #2
+    \hfill
+    #3
 
-\newcommand{\cvElementHeader}[3]{
-    \cvTitle{#1} #2 \hfill \cvYear{#3}
-}
+    \vspace{-3pt}
+    \href{#4}{#4}
+    \vspace{-3pt}
 
-\newcommand{\project}[5]{
-    \sep
-    
-    \cvElementHeader{#1}{#2}{#3}
+    #5
+}}
 
-    {\href{#4}{#4}}
+\newcommand{\school}[3]{{
+    \listLabel
+    \textbf{#1}
+    \hfill
+    #2
 
-    \sep
-
-    {\cvLabel #5}
-}
+    \vspace{-3pt}
+    \hspace{6pt}
+    \textit{#3}
+}}
 
 \newcommand{\award}[4]{
-    \sep
+    \listLabel
+    \textbf{#1}
+    #2
+    \hfill
+    #3
 
-    \cvElementHeader{#1}{#2}{#3}
-
-    \sep
-
-    {\cvLabel #4}
+    #4
 }
 
-\newcommand{\skill}[2]{
-    \cvTitle{#1}
-
-    {#2}
-}
-
-\newcommand{\skills}[2]{
-    \vspace{1pt}
-
-    {\color{yearColor}\textbf{#1:}}
-
-    \msep
-
-    {#2}
-
-    \sep
-}
-
-\newcommand{\school}[3]{
-    \sep
-
-    {\cvTitle{#1} \cvYear{#2}}
-    
-    {#3}
-
-    \sep
-}
-
-\newcommand{\rodo}[1]{
-    \footnotesize
-    #1
-}
+\newcommand{\rodo}{{
+    \vfill
+    \fontsize{7pt}{8.4pt}
+    \textit{I agree to the processing of personal data provided in this document for realising the recruitment process pursuant to the Personal Data Protection Act of 10 May 2018 (Journal of Laws 2018, item 1000) and in agreement with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation).}
+}}
