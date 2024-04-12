@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build
-        run: ./bin/typst compile --font-path fonts cv.typ
+        run: chmod +x ./bin/typst && ./bin/typst compile --font-path fonts cv.typ
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
