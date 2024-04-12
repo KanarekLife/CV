@@ -19,7 +19,7 @@
     #link(url)[
       #stack(
           dir: ltr,
-          image(icon, width: 16pt),
+          image(icon, width: 12pt),
           h(2pt),
           align(horizon)[#text(size: 11pt)[#body]]
       )
@@ -29,7 +29,19 @@
 
   #stack(
     dir: ttb,
-    text(size: 28pt, weight: "semibold")[Stanisław Nieradko],
+    stack(
+      dir: ltr,
+      text(size: 28pt, weight: "bold")[Stanisław Nieradko],
+      h(1fr),
+      align(bottom)[
+        #stack(
+          dir: ltr,
+          image("icons/map-pin.svg", width: 12pt),
+          h(2pt),
+          align(horizon)[#text(size: 11pt)[Gdańsk, Poland]]
+        )
+      ]
+    ),
     v(10pt),
     text(size: 11pt)[*Full-Stack Software Engineer* with 2 years of experience specializing in *.NET Backend Development*.]
   )
@@ -67,12 +79,12 @@
         [#text(size: 10pt, weight: "bold")[Trainee]], [], [07.2022 -- 09.2022]
       )
       #v(2.5pt)
-      - Developed and maintained backend for complex enterprise back-office and client-facing booking application for a client from the beauty sector. The older system was based on .NET Framework 4.8 and hosted on Azure Web Apps, whereas the new system was based on .NET 6 and hosted on Kubernetes. Both systems were tightly integrated with Azure services for database hosting, storage, and messaging.
-      - Despite working mainly on the backend, I also regularly contributed both to the frontend and the infrastructure. This included being responsible for the older Angular frontend, seldom help with the newer Angular frontend, as well as the Docker and Kubernetes infrastructure.
-      - Introduced many complex features to the mature system in a timely manner and without introducing any major bugs. This included features such as a allowing the client to book multiple services in a single booking, building "search by location" functionality and integrating with kubernetes to allow for automatic deployment of user's websites with custom domains.
-      - Refactored and improved the existing codebase, making it more maintainable and easier to work with. This included fixing many bugs, improving performance, updating dependencies and improving the development experience.
-      - Helped and advised other developers (both from my team as well as others) in their work. This included code reviews, pair programming, and answering questions.
-      - Received "Rookie of the Year 2023" award for the best performance among all new employees (between 1 to 2 years of employment) in 2023.
+      - Developed and maintained the backend for a complex enterprise back-office and client-facing booking application for a client in the beauty sector. The older system was based on .NET Framework 4.8 and hosted on Azure Web Apps, whereas the new system was based on .NET 6 and hosted on Kubernetes. Both systems were tightly integrated with Azure services for database hosting, storage, and messaging.
+      - Despite primarily focusing on the backend, I also regularly contributed to both the frontend and the infrastructure. This included being responsible for the older Angular frontend, occasionally assisting with the newer Angular frontend, as well as managing the Docker and Kubernetes infrastructure.
+      - Introduced many complex features to the mature system in a timely manner and without introducing any major bugs. This included features such as allowing the client to book multiple services in a single booking, building "search by location" functionality, and integrating with Kubernetes to enable automatic deployment of users' websites with custom domains.
+      - Refactored and improved the existing codebase, making it more maintainable and easier to work with. This involved fixing numerous bugs, improving performance, updating dependencies, and enhancing the development experience.
+      - Assisted and advised other developers (both from my team and others) in their work. This included conducting code reviews, engaging in pair programming sessions, and answering questions.
+      - Received the "Rookie of the Year 2023" award for the best performance among all new employees (with 1 to 2 years of employment) in 2023.
     ]
   )
 ]
@@ -92,7 +104,7 @@
         [Award for the best performance among all new employees in 2023.]
       )
 
-      I received the "Rookie of the Year 2023" award for my performance in 2023. Among the reasons for receiving the award were my technical skills, helping others, and my ability to deliver high-quality work in a timely manner.
+      I received the 'Rookie of the Year 2023' award for my performance in 2023. The reasons for receiving the award included my technical skills, assistance to others, and my ability to consistently deliver high-quality work in a timely manner.
     ],
     [
       #stack(
@@ -102,7 +114,7 @@
         [$2^op("nd")$ place in Poland-wide hackathon for high school students.]
       )
 
-      I coordinated a team of 4 people in building a JedzenioPlanner project for a HackHeroes 2020 hackathon.  During the project I assembled the team, divided tasks and co-developed its back-end. Project took a 2nd place, despite a record number of competitors from all over Poland.
+      I coordinated a team of four people in building the JedzenioPlanner project for a HackHeroes 2020 hackathon. During the project, I assembled the team, divided tasks, and co-developed its back-end. The project secured second place, despite facing a record number of competitors from all over Poland.
     ]
   )
 ]
@@ -115,7 +127,7 @@
     [
       #stack(
         dir: ttb,
-        text(size: 12pt, weight: "semibold")[BS in Computer Science],
+        text(size: 12pt, weight: "semibold")[BSc in Computer Science],
         v(5pt),
         [Gdańsk University of Technology],
         v(5pt),
@@ -134,9 +146,8 @@
     [
       #text(size: 10pt, weight: "bold")[.NET Backend Development]
       #v(2.5pt)
-      - .NET Framework 4.8
-      - .NET 8
       - C\#
+      - .NET Framework 4.8 and .NET 8
       - ASP.NET and ASP.NET Core
       - Entity Framework and Entity Framework Core
       - T-SQL and MSSQL Server
@@ -146,7 +157,7 @@
     [
       #text(size: 10pt, weight: "bold")[Frontend Development]
       #v(2.5pt)
-      - HTML, CSS
+      - HTML, CSS, TailwindCSS
       - TypeScript for both NodeJS and browser environments
       - Working knowledge of Angular 17 and AngularJS
       - Hobbyist experience with SvelteJS and Astro
@@ -180,7 +191,7 @@
 
 #let footer() = [
   #v(1fr)
-  #align(center, text(size: 9pt, weight: "light")[I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process.])
+  #align(center, text(size: 8pt, weight: "light")[I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process.])
 ]
 
 #header()
