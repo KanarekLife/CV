@@ -45,7 +45,7 @@
     v(10pt),
     text(size: 11pt)[*Full-Stack Software Engineer* with 2 years of experience specializing in *.NET Backend Development*.]
   )
-
+  #v(-6pt)
   #stack(
     dir: ltr,
     contact-item("icons/github.svg", "https://github.com/KanarekLife")[KanarekLife],
@@ -58,11 +58,11 @@
     h(spacing),
     contact-item("icons/phone.svg", "tel:+48506257727")[506 257 727]
   )
+  #v(10pt)
 ]
 
 #let experience() = [
   #text(size: 12pt, weight: "bold")[Experience]
-  #v(5pt)
   #list(
     [
       #stack(
@@ -71,6 +71,7 @@
         h(1fr),
         align(bottom, "Gdańsk, Poland")
       )
+      #v(-5pt)
       #grid(
         columns: (auto, 2fr, auto),
         row-gutter: 7pt,
@@ -80,27 +81,23 @@
       )
       #v(2.5pt)
       - Developed and maintained the backend for a complex enterprise back-office and client-facing booking application for a client in the beauty sector. The older system was based on .NET Framework 4.8 and hosted on Azure Web Apps, whereas the new system was based on .NET 6 and hosted on Kubernetes. Both systems were tightly integrated with Azure services for database hosting, storage, and messaging.
-      - Despite primarily focusing on the backend, I also regularly contributed to both the frontend and the infrastructure. This included being responsible for the older Angular frontend, occasionally assisting with the newer Angular frontend, as well as managing the Docker and Kubernetes infrastructure.
-      - Introduced many complex features to the mature system in a timely manner and without introducing any major bugs. This included features such as allowing the client to book multiple services in a single booking, building "search by location" functionality, and integrating with Kubernetes to enable automatic deployment of users' websites with custom domains.
+      - Excluding backend I contributed to both the frontend and the infrastructure sides of the project. This included being responsible for the older Angular frontend, occasionally assisting with the newer Angular frontend, as well as managing the Docker and Kubernetes infrastructure.
       - Refactored and improved the existing codebase, making it more maintainable and easier to work with. This involved fixing numerous bugs, improving performance, updating dependencies, and enhancing the development experience.
       - Assisted and advised other developers (both from my team and others) in their work. This included conducting code reviews, engaging in pair programming sessions, and answering questions.
-      - Received the "Rookie of the Year 2023" award for the best performance among all new employees (with 1 to 2 years of employment) in 2023.
     ]
   )
 ]
 
 #let achievements() = [
   == Achievements
-  #v(5pt)
-
   #list(
     tight: false,
-    spacing: 10pt,
+    spacing: 8pt,
     [
       #stack(
         dir: ttb,
         text(size: 12pt, weight: "semibold")[Aspire Systems Rookie of the Year 2023],
-        v(8pt),
+        v(6pt),
         [Award for the best performance among all new employees in 2023.]
       )
 
@@ -110,13 +107,40 @@
       #stack(
         dir: ttb,
         text(size: 12pt, weight: "semibold")[HackHeroes 2020],
-        v(8pt),
+        v(6pt),
         [$2^op("nd")$ place in Poland-wide hackathon for high school students.]
       )
 
       I coordinated a team of four people in building the JedzenioPlanner project for a HackHeroes 2020 hackathon. During the project, I assembled the team, divided tasks, and co-developed its back-end. The project secured second place, despite facing a record number of competitors from all over Poland.
     ]
   )
+]
+
+#let certifications() = [
+  == Certifications
+  #v(5pt)
+
+  #list(
+    tight: false,
+    spacing: 10pt,
+    [
+      #stack(
+        dir: ttb,
+        text(size: 12pt, weight: "semibold")[Microsoft Certified: Azure Fundamentals (AZ-900)],
+        v(5pt),
+        [Microsoft, May 2024]
+      )
+    ],
+    [
+      #stack(
+        dir: ttb,
+        text(size: 12pt, weight: "semibold")[FCE (First Certificate in English) - C1],
+        v(5pt),
+        [Cambridge Assessment, June 2021]
+      )
+    ]
+  )
+
 ]
 
 #let education() = [
@@ -145,7 +169,6 @@
     spacing: 10pt,
     [
       #text(size: 10pt, weight: "bold")[.NET Backend Development]
-      #v(2.5pt)
       - C\#
       - .NET Framework 4.8 and .NET 8
       - ASP.NET and ASP.NET Core
@@ -156,15 +179,13 @@
     ],
     [
       #text(size: 10pt, weight: "bold")[Frontend Development]
-      #v(2.5pt)
       - HTML, CSS, TailwindCSS
       - TypeScript for both NodeJS and browser environments
-      - Working knowledge of Angular 17 and AngularJS
+      - Working knowledge of Angular 18 and AngularJS
       - Hobbyist experience with SvelteJS and Astro
     ],
     [
       #text(size: 10pt, weight: "bold")[DevOps]
-      #v(2.5pt)
       - Docker and Podman
       - Kubernetes
       - Azure Cloud Services (Web Apps, Blob Storage, Service Bus, etc.)
@@ -174,10 +195,15 @@
     ],
     [
       #text(size: 10pt, weight: "bold")[Languages]
-      #v(2.5pt)
-      - Polish (native)
-      - English (C1 level with FCE ceritifcate)
-      - German (basic)
+      #v(-5pt)
+      #grid(
+        columns: (auto, auto),
+        row-gutter: 5pt,
+        column-gutter: 10pt,
+        [- Polish], [(Native)],
+        [- English], [(C1)],
+        [- German], [(Basic)]
+      )
     ]
   )
 ]
@@ -186,7 +212,7 @@
   == Interests
   #v(5pt)
 
-  Cloud Computing, Web Development, Homelabs, Gym, TV Series, Computer Games
+  Cloud Computing, Software Architecture, Computer Games, TV Series
 ]
 
 #let footer() = [
@@ -202,10 +228,11 @@
   [
     #experience()
     #achievements()
+    #certifications()
   ],
   [
-    #skills()
     #education()
+    #skills()
     #interests()
   ]
 )

@@ -9,7 +9,7 @@ To build your own version of this CV, you need to download and configure Typst o
 ### Development mode
 
 ```bash
-./bin/typst compile --font-path fonts cv.typ
+./bin/typst watch --font-path fonts cv.typ
 ```
 
 ### Build
