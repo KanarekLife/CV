@@ -14,6 +14,14 @@
   tracking: 0.2pt,
 )
 
+#let yearsOfExperience() = {
+  let today = datetime.today()
+  let startDate = datetime(year: 2022, month: 07, day: 01)
+  let days = (today - startDate).days()
+  let years = days / 365.5
+  return calc.floor(years * 2) / 2
+}
+
 #let header() = [
   #let contact-item(icon, url, body) = [
     #link(url)[
@@ -31,7 +39,7 @@
     dir: ttb,
     stack(
       dir: ltr,
-      text(size: 28pt, weight: "bold")[Stanisław Nieradko],
+      text(size: 20pt, weight: "bold")[= Stanisław Nieradko],
       h(1fr),
       align(bottom)[
         #stack(
@@ -42,8 +50,8 @@
         )
       ]
     ),
-    v(10pt),
-    text(size: 11pt)[*Full-Stack Software Engineer* with 2 years of experience specializing in *.NET Backend Development*.]
+    v(25pt),
+    text(size: 11pt)[*Full-Stack Software Engineer* with #yearsOfExperience() years of experience specializing in *.NET Backend Development*.]
   )
   #v(-6pt)
   #stack(
@@ -62,7 +70,8 @@
 ]
 
 #let experience() = [
-  #text(size: 12pt, weight: "bold")[Experience]
+  == Experience
+
   #list(
     [
       #stack(
@@ -71,15 +80,14 @@
         h(1fr),
         align(bottom, "Gdańsk, Poland")
       )
-      #v(-5pt)
       #grid(
-        columns: (auto, 2fr, auto),
+        columns: (20pt, auto, 2fr, auto, 20pt),
         row-gutter: 7pt,
-        [#text(size: 10pt, weight: "bold")[Engineer]], [], [01.2024 -- now],
-        [#text(size: 10pt, weight: "bold")[Associate Engineer]], [], [10.2022 -- 12.2023],
-        [#text(size: 10pt, weight: "bold")[Trainee]], [], [07.2022 -- 09.2022]
+        [], [#text(size: 10pt, weight: "bold")[Engineer]], [], [01.2024 -- now], [],
+        [], [#text(size: 10pt, weight: "bold")[Associate Engineer]], [], [10.2022 -- 12.2023], [],
+        [], [#text(size: 10pt, weight: "bold")[Trainee]], [], [07.2022 -- 09.2022], []
       )
-      #v(2.5pt)
+      #v(5pt)
       - Developed and maintained the backend for a complex enterprise back-office and client-facing booking application for a client in the beauty sector. The older system was based on .NET Framework 4.8 and hosted on Azure Web Apps, whereas the new system was based on .NET 6 and hosted on Kubernetes. Both systems were tightly integrated with Azure services for database hosting, storage, and messaging.
       - Excluding backend I contributed to both the frontend and the infrastructure sides of the project. This included being responsible for the older Angular frontend, occasionally assisting with the newer Angular frontend, as well as managing the Docker and Kubernetes infrastructure.
       - Refactored and improved the existing codebase, making it more maintainable and easier to work with. This involved fixing numerous bugs, improving performance, updating dependencies, and enhancing the development experience.
@@ -90,6 +98,7 @@
 
 #let achievements() = [
   == Achievements
+
   #list(
     tight: false,
     spacing: 8pt,
@@ -97,8 +106,8 @@
       #stack(
         dir: ttb,
         text(size: 12pt, weight: "semibold")[Aspire Systems Rookie of the Year 2023],
-        v(6pt),
-        [Award for the best performance among all new employees in 2023.]
+        v(5pt),
+        ["Award for the best performance among all new employees in 2023."]
       )
 
       I received the 'Rookie of the Year 2023' award for my performance in 2023. The reasons for receiving the award included my technical skills, assistance to others, and my ability to consistently deliver high-quality work in a timely manner.
@@ -107,8 +116,8 @@
       #stack(
         dir: ttb,
         text(size: 12pt, weight: "semibold")[HackHeroes 2020],
-        v(6pt),
-        [$2^op("nd")$ place in Poland-wide hackathon for high school students.]
+        v(5pt),
+        ["$2^op("nd")$ place in Poland-wide hackathon for high school students."]
       )
 
       I coordinated a team of four people in building the JedzenioPlanner project for a HackHeroes 2020 hackathon. During the project, I assembled the team, divided tasks, and co-developed its back-end. The project secured second place, despite facing a record number of competitors from all over Poland.
@@ -118,7 +127,6 @@
 
 #let certifications() = [
   == Certifications
-  #v(5pt)
 
   #list(
     tight: false,
@@ -145,7 +153,6 @@
 
 #let education() = [
   == Education
-  #v(5pt)
 
   #list(
     [
@@ -210,7 +217,6 @@
 
 #let interests() = [
   == Interests
-  #v(5pt)
 
   Cloud Computing, Software Architecture, Computer Games, TV Series
 ]
@@ -224,7 +230,7 @@
 
 #grid(
   columns: (2fr, 1fr),
-  column-gutter: 10pt,
+  column-gutter: 15pt,
   [
     #experience()
     #achievements()
