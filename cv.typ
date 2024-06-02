@@ -50,8 +50,8 @@
         )
       ]
     ),
-    v(25pt),
-    text(size: 11pt)[*Full-Stack Software Engineer* with #yearsOfExperience() years of experience specializing in *.NET Backend Development*.]
+    v(20pt),
+    text(size: 11pt)[*Full-Stack Software Engineer* with #yearsOfExperience() years of experience in *.NET Backend Development*.]
   )
   #v(-6pt)
   #stack(
@@ -176,8 +176,7 @@
     spacing: 10pt,
     [
       #text(size: 10pt, weight: "bold")[.NET Backend Development]
-      - C\#
-      - .NET Framework 4.8 and .NET 8
+      - C\# (.NET Framework 4.8 and .NET 8)
       - ASP.NET and ASP.NET Core
       - Entity Framework and Entity Framework Core
       - T-SQL and MSSQL Server
