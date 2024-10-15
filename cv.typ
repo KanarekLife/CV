@@ -28,7 +28,7 @@
       #stack(
           dir: ltr,
           image(icon, width: 12pt),
-          h(2pt),
+          h(4pt),
           align(horizon)[#text(size: 11pt)[#body]]
       )
     ]
@@ -41,19 +41,19 @@
       dir: ltr,
       text(size: 20pt, weight: "bold")[= Stanisław Nieradko],
       h(1fr),
-      align(bottom)[
-        #stack(
+      align(center, stack(
           dir: ltr,
           image("icons/map-pin.svg", width: 12pt),
-          h(2pt),
+          h(4pt),
           align(horizon)[#text(size: 11pt)[Gdańsk, Poland]]
-        )
-      ]
+      ))
     ),
-    v(20pt),
+    v(17.5pt),
     text(size: 11pt)[*Full-Stack Software Engineer* with #yearsOfExperience() years of experience in *.NET Backend Development*.]
   )
-  #v(-6pt)
+
+  #v(-7.5pt)
+
   #stack(
     dir: ltr,
     contact-item("icons/github.svg", "https://github.com/KanarekLife")[KanarekLife],
@@ -66,6 +66,7 @@
     h(spacing),
     contact-item("icons/phone.svg", "tel:+48506257727")[506 257 727]
   )
+
   #v(10pt)
 ]
 
@@ -81,17 +82,17 @@
         align(bottom, "Gdańsk, Poland")
       )
       #grid(
-        columns: (20pt, auto, 2fr, auto, 20pt),
+        columns: (auto, 1fr, auto),
         row-gutter: 7pt,
-        [], [#text(size: 10pt, weight: "bold")[Engineer]], [], [01.2024 -- now], [],
-        [], [#text(size: 10pt, weight: "bold")[Associate Engineer]], [], [10.2022 -- 12.2023], [],
-        [], [#text(size: 10pt, weight: "bold")[Trainee]], [], [07.2022 -- 09.2022], []
+        [#text(size: 10pt, weight: "bold")[Engineer]], [], [01.2024 -- now],
+        [#text(size: 10pt, weight: "bold")[Associate Engineer]], [], [10.2022 -- 12.2023],
+        [#text(size: 10pt, weight: "bold")[Trainee]], [], [07.2022 -- 09.2022],
       )
-      #v(5pt)
-      - Developed and maintained the backend for a complex enterprise back-office and client-facing booking application for a client in the beauty sector. The older system was based on .NET Framework 4.8 and hosted on Azure Web Apps, whereas the new system was based on .NET 6 and hosted on Kubernetes. Both systems were tightly integrated with Azure services for database hosting, storage, and messaging.
+      #v(7.5pt)
+      - Worked on the backend for a complex enterprise back-office and client-facing booking application for a client in the beauty sector. The older system was based on .NET Framework 4.8 and hosted on Azure Web Apps, whereas the new system was based on .NET 6 and hosted on Kubernetes. Both systems were tightly integrated with Azure services for database hosting, storage, and messaging.
       - Excluding backend I contributed to both the frontend and the infrastructure sides of the project. This included being responsible for the older Angular frontend, occasionally assisting with the newer Angular frontend, as well as managing the Docker and Kubernetes infrastructure.
       - Refactored and improved the existing codebase, making it more maintainable and easier to work with. This involved fixing numerous bugs, improving performance, updating dependencies, and enhancing the development experience.
-      - Assisted and advised other developers (both from my team and others) in their work. This included conducting code reviews, engaging in pair programming sessions, and answering questions.
+      - Assisted and advised other developers (both from my team and others) in their work. This included conducting code reviews, engaging in pair programming sessions, and helping them with analysis of their tasks.
     ]
   )
 ]
@@ -106,7 +107,7 @@
       #stack(
         dir: ttb,
         text(size: 12pt, weight: "semibold")[Aspire Systems Rookie of the Year 2023],
-        v(5pt),
+        v(7.5pt),
         ["Award for the best performance among all new employees in 2023."]
       )
 
@@ -116,7 +117,7 @@
       #stack(
         dir: ttb,
         text(size: 12pt, weight: "semibold")[HackHeroes 2020],
-        v(5pt),
+        v(7.5pt),
         ["$2^op("nd")$ place in Poland-wide hackathon for high school students."]
       )
 
@@ -181,18 +182,18 @@
       - Entity Framework and Entity Framework Core
       - T-SQL and MSSQL Server
       - Good knowledge of architectural patterns, best practices and design principles
-      - Experience with Azure services integration
+      - Experience in integrating with Azure services
     ],
     [
       #text(size: 10pt, weight: "bold")[Frontend Development]
       - HTML, CSS, TailwindCSS
       - TypeScript for both NodeJS and browser environments
-      - Working knowledge of Angular 18 and AngularJS
-      - Hobbyist experience with SvelteJS and Astro
+      - Working knowledge of Angular and AngularJS
+      - Hobbyist experience with SvelteJS and Astro.build
     ],
     [
       #text(size: 10pt, weight: "bold")[DevOps]
-      - Docker and Podman
+      - Docker
       - Kubernetes
       - Azure Cloud Services (Web Apps, Blob Storage, Service Bus, etc.)
       - Azure DevOps and its CI/CD pipelines
@@ -229,7 +230,7 @@
 
 #grid(
   columns: (2fr, 1fr),
-  column-gutter: 15pt,
+  column-gutter: 30pt,
   [
     #experience()
     #achievements()
