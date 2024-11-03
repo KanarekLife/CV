@@ -49,7 +49,7 @@
       ))
     ),
     v(17.5pt),
-    text(size: 11pt)[*Full-Stack Software Engineer* with #yearsOfExperience() years of experience in *.NET Backend Development*.]
+    text(size: 11pt)[*Full-Stack Software Engineer* with over #yearsOfExperience() years of experience in *.NET Backend Development*.]
   )
 
   #v(-7.5pt)
@@ -180,25 +180,24 @@
       - C\# (.NET Framework 4.8 and .NET 8)
       - ASP.NET and ASP.NET Core
       - Entity Framework and Entity Framework Core
-      - T-SQL and MSSQL Server
+      - T-SQL, MSSQL Server and Azure SQL
       - Good knowledge of architectural patterns, best practices and design principles
-      - Experience in integrating with Azure services
+      - Experience in building cloud-native applications
     ],
     [
       #text(size: 10pt, weight: "bold")[Frontend Development]
       - HTML, CSS, TailwindCSS
       - TypeScript for both NodeJS and browser environments
-      - Working knowledge of Angular and AngularJS
-      - Hobbyist experience with SvelteJS and Astro.build
+      - Commerical experience of working with Angular and AngularJS
+      - Hobbyist experience with Svelte, React and Astro
     ],
     [
       #text(size: 10pt, weight: "bold")[DevOps]
-      - Docker
-      - Kubernetes
+      - Docker, Kubernetes, helm, FluxCD
       - Azure Cloud Services (Web Apps, Blob Storage, Service Bus, etc.)
-      - Azure DevOps and its CI/CD pipelines
-      - Linux Server Administration
-      - Scripting in Bash, Python and PowerShell
+      - Azure DevOps, GitHub and their CI/CD pipelines
+      - Linux Server Administration (manual and with Ansible)
+      - Writing scripts in Bash, Python and PowerShell
     ],
     [
       #text(size: 10pt, weight: "bold")[Languages]
@@ -218,7 +217,7 @@
 #let interests() = [
   == Interests
 
-  Cloud Computing, Software Architecture, Computer Games, TV Series
+  Cloud Computing, Software Architecture, Computer Games, TV Series, DevOps
 ]
 
 #let footer() = [
