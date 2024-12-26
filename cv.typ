@@ -41,7 +41,7 @@
       dir: ltr,
       text(size: 20pt, weight: "bold")[= Stanisław Nieradko],
       h(1fr),
-      align(center, stack(
+      align(center+horizon, stack(
           dir: ltr,
           image("icons/map-pin.svg", width: 12pt),
           h(4pt),
@@ -71,7 +71,7 @@
 ]
 
 #let experience() = [
-  == Experience
+  == Professional Experience
 
   #list(
     [
@@ -217,7 +217,7 @@
 #let interests() = [
   == Interests
 
-  Cloud Computing, Software Architecture, Computer Games, TV Series, DevOps
+  Homelabs, Cloud Computing, Software Architecture, Computer Games, Gym, DevOps
 ]
 
 #let footer() = [
