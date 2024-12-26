@@ -9,7 +9,7 @@
 )
 
 #set text(
-  font: "Inter",
+  font: "Nunito",
   size: 10pt,
   tracking: 0.2pt,
 )
