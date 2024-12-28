@@ -79,7 +79,12 @@
         dir: ltr,
         text(size: 12pt, weight: "semibold")[Aspire Systems],
         h(1fr),
-        align(bottom, "Gdańsk, Poland")
+        align(bottom, stack(
+          dir: ltr,
+          image("icons/map-pin.svg", width: 8pt),
+          h(4pt),
+          align(horizon)[#text(size: 11pt)[Gdańsk, Poland]]
+        ))
       )
       #grid(
         columns: (auto, 1fr, auto),
@@ -108,7 +113,7 @@
         dir: ttb,
         text(size: 12pt, weight: "semibold")[Aspire Systems Rookie of the Year 2023],
         v(7.5pt),
-        ["Award for the best performance among all new employees in 2023."]
+        [_Award for the best performance among all new employees in 2023._]
       )
 
       I received the 'Rookie of the Year 2023' award for my performance in 2023. The reasons for receiving the award included my technical skills, assistance to others, and my ability to consistently deliver high-quality work in a timely manner.
@@ -118,7 +123,7 @@
         dir: ttb,
         text(size: 12pt, weight: "semibold")[HackHeroes 2020],
         v(7.5pt),
-        ["$2^op("nd")$ place in Poland-wide hackathon for high school students."]
+        [_$2^op("nd")$ place in Poland-wide hackathon for high school students._]
       )
 
       I coordinated a team of four people in building the JedzenioPlanner project for a HackHeroes 2020 hackathon. During the project, I assembled the team, divided tasks, and co-developed its back-end. The project secured second place, despite facing a record number of competitors from all over Poland.
