@@ -1,250 +1,153 @@
 #set document(
-  title: "Stanisław Nieradko's CV",
-  author: "Stanisław Nieradko"
+  title: "Stanisław Nieradko CV",
+  author: "Stanisław Nieradko <stanislaw@nieradko.com>",
 )
 
 #set page(
   paper: "a4",
-  margin: .75cm,
+  margin: 1cm
 )
 
 #set text(
-  font: "Nunito",
+  font: "Lato",
   size: 10pt,
-  tracking: 0.2pt,
+  tracking: 0.2pt
 )
 
-#let yearsOfExperience() = {
-  let today = datetime.today()
-  let startDate = datetime(year: 2022, month: 07, day: 01)
-  let days = (today - startDate).days()
-  let years = days / 365.5
-  return calc.floor(years * 2) / 2
-}
+#text(size: 28pt)[Stanisław Nieradko] \
+#text(size: 14pt)[Full-Stack Software Engineer with interest in DevOps]
 
-#let header() = [
-  #let contact-item(icon, url, body) = [
-    #link(url)[
-      #stack(
-          dir: ltr,
-          image(icon, width: 12pt),
-          h(4pt),
-          align(horizon)[#text(size: 11pt)[#body]]
-      )
-    ]
-  ]
-  #let spacing = 10pt
-
-  #stack(
-    dir: ttb,
-    stack(
-      dir: ltr,
-      text(size: 20pt, weight: "bold")[= Stanisław Nieradko],
-      h(1fr),
-      align(center+horizon, stack(
-          dir: ltr,
-          image("icons/map-pin.svg", width: 12pt),
-          h(4pt),
-          align(horizon)[#text(size: 11pt)[Gdańsk, Poland]]
-      ))
-    ),
-    v(17.5pt),
-    text(size: 11pt)[*Full-Stack Software Engineer* with over #yearsOfExperience() years of experience in *.NET Backend Development*.]
-  )
-
-  #v(-7.5pt)
-
-  #stack(
+#align(left, stack(
+  dir: ltr,
+  spacing: 15pt,
+  link("https://github.com/KanarekLife", stack(
     dir: ltr,
-    contact-item("icons/github.svg", "https://github.com/KanarekLife")[KanarekLife],
-    h(spacing),
-    contact-item("icons/linkedin.svg", "https://linkedin.com/in/stanislaw-nieradko")[Stanisław Nieradko],
-    h(spacing),
-    contact-item("icons/globe.svg", "https://nieradko.com")[nieradko.com],
-    h(spacing),
-    contact-item("icons/mail.svg", "mailto:stanislaw@nieradko.com")[stanislaw\@nieradko.com],
-    h(spacing),
-    contact-item("icons/phone.svg", "tel:+48506257727")[506 257 727]
-  )
-
-  #v(10pt)
-]
-
-#let experience() = [
-  == Professional Experience
-
-  #list(
-    [
-      #stack(
-        dir: ltr,
-        text(size: 12pt, weight: "semibold")[Aspire Systems],
-        h(1fr),
-        align(bottom, stack(
-          dir: ltr,
-          image("icons/map-pin.svg", width: 8pt),
-          h(4pt),
-          align(horizon)[#text(size: 11pt)[Gdańsk, Poland]]
-        ))
-      )
-      #grid(
-        columns: (auto, 1fr, auto),
-        row-gutter: 7pt,
-        [#text(size: 10pt, weight: "bold")[Engineer]], [], [01.2024 -- now],
-        [#text(size: 10pt, weight: "bold")[Associate Engineer]], [], [10.2022 -- 12.2023],
-        [#text(size: 10pt, weight: "bold")[Trainee]], [], [07.2022 -- 09.2022],
-      )
-      #v(7.5pt)
-      - Worked on the backend for a complex enterprise back-office and client-facing booking application for a client in the beauty sector. The older system was based on .NET Framework 4.8 and hosted on Azure Web Apps, whereas the new system was based on .NET 6 and hosted on Kubernetes. Both systems were tightly integrated with Azure services for database hosting, storage, and messaging.
-      - Excluding backend I contributed to both the frontend and the infrastructure sides of the project. This included being responsible for the older Angular frontend, occasionally assisting with the newer Angular frontend, as well as managing the Docker and Kubernetes infrastructure.
-      - Refactored and improved the existing codebase, making it more maintainable and easier to work with. This involved fixing numerous bugs, improving performance, updating dependencies, and enhancing the development experience.
-      - Assisted and advised other developers (both from my team and others) in their work. This included conducting code reviews, engaging in pair programming sessions, and helping them with analysis of their tasks.
-    ]
-  )
-]
-
-#let achievements() = [
-  == Achievements
-
-  #list(
-    tight: false,
-    spacing: 8pt,
-    [
-      #stack(
-        dir: ttb,
-        text(size: 12pt, weight: "semibold")[Aspire Systems Rookie of the Year 2023],
-        v(7.5pt),
-        [_Award for the best performance among all new employees in 2023._]
-      )
-
-      I received the 'Rookie of the Year 2023' award for my performance in 2023. The reasons for receiving the award included my technical skills, assistance to others, and my ability to consistently deliver high-quality work in a timely manner.
-    ],
-    [
-      #stack(
-        dir: ttb,
-        text(size: 12pt, weight: "semibold")[HackHeroes 2020],
-        v(7.5pt),
-        [_$2^op("nd")$ place in Poland-wide hackathon for high school students._]
-      )
-
-      I coordinated a team of four people in building the JedzenioPlanner project for a HackHeroes 2020 hackathon. During the project, I assembled the team, divided tasks, and co-developed its back-end. The project secured second place, despite facing a record number of competitors from all over Poland.
-    ]
-  )
-]
-
-#let certifications() = [
-  == Certifications
-
-  #list(
-    tight: false,
-    spacing: 10pt,
-    [
-      #stack(
-        dir: ttb,
-        text(size: 12pt, weight: "semibold")[Microsoft Certified: Azure Fundamentals (AZ-900)],
-        v(5pt),
-        [Microsoft, May 2024]
-      )
-    ],
-    [
-      #stack(
-        dir: ttb,
-        text(size: 12pt, weight: "semibold")[FCE (First Certificate in English) - C1],
-        v(5pt),
-        [Cambridge Assessment, June 2021]
-      )
-    ]
-  )
-
-]
-
-#let education() = [
-  == Education
-
-  #list(
-    [
-      #stack(
-        dir: ttb,
-        text(size: 12pt, weight: "semibold")[BSc in Computer Science],
-        v(5pt),
-        [Gdańsk University of Technology],
-        v(5pt),
-        [2022 -- now]
-      )
-    ]
-  )
-]
-
-#let skills() = [
-  == Skills
-
-  #list(
-    tight: false,
-    spacing: 10pt,
-    [
-      #text(size: 10pt, weight: "bold")[.NET Backend Development]
-      - C\# (.NET Framework 4.8 and .NET 8)
-      - ASP.NET and ASP.NET Core
-      - Entity Framework and Entity Framework Core
-      - T-SQL, MSSQL Server and Azure SQL
-      - Good knowledge of architectural patterns, best practices and design principles
-      - Experience in building cloud-native applications
-    ],
-    [
-      #text(size: 10pt, weight: "bold")[Frontend Development]
-      - HTML, CSS, TailwindCSS
-      - TypeScript for both NodeJS and browser environments
-      - Commerical experience of working with Angular and AngularJS
-      - Hobbyist experience with Svelte, React and Astro
-    ],
-    [
-      #text(size: 10pt, weight: "bold")[DevOps]
-      - Docker, Kubernetes, helm, FluxCD
-      - Azure Cloud Services (Web Apps, Blob Storage, Service Bus, etc.)
-      - Azure DevOps, GitHub and their CI/CD pipelines
-      - Linux Server Administration (manual and with Ansible)
-      - Writing scripts in Bash, Python and PowerShell
-    ],
-    [
-      #text(size: 10pt, weight: "bold")[Languages]
-      #v(-5pt)
-      #grid(
-        columns: (auto, auto),
-        row-gutter: 5pt,
-        column-gutter: 10pt,
-        [- Polish], [(Native)],
-        [- English], [(C1)],
-        [- German], [(Basic)]
-      )
-    ]
-  )
-]
-
-#let interests() = [
-  == Interests
-
-  Homelabs, Cloud Computing, Software Architecture, Computer Games, Gym, DevOps
-]
-
-#let footer() = [
-  #v(1fr)
-  #align(center, text(size: 8pt, weight: "light")[I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process.])
-]
-
-#header()
+    spacing: 5pt,
+    image("icons/github.svg", width: 11pt),
+    align(horizon)[KanarekLife]
+  )),
+  link("https://linkedin.com/in/stanislaw-nieradko", stack(
+    dir: ltr,
+    spacing: 5pt,
+    image("icons/linkedin.svg", width: 11pt),
+    align(horizon)[Stanisław Nieradko]
+  )),
+  link("https://nieradko.com", stack(
+    dir: ltr,
+    spacing: 5pt,
+    image("icons/globe.svg", width: 11pt),
+    align(horizon)[nieradko.com]
+  )),
+  link("mailto:stanislaw@nieradko.com", stack(
+    dir: ltr,
+    spacing: 5pt,
+    image("icons/envelope.svg", width: 11pt),
+    align(horizon)[stanislaw\@nieradko.com]
+  )),
+  link("tel:+48506257727", stack(
+    dir: ltr,
+    spacing: 5pt,
+    image("icons/telephone.svg", width: 11pt),
+    align(horizon)[506 257 727]
+  ))
+))
+#v(7.5pt)
 
 #grid(
-  columns: (2fr, 1fr),
-  column-gutter: 30pt,
+  columns: (65%, 1fr, 30%),
   [
-    #experience()
-    #achievements()
-    #certifications()
+    == Professional Experience
+
+    #pad(top: 5pt)[
+      #grid(
+        columns: (auto, 1fr, auto),
+        gutter: 7.5pt,
+        text(size: 14pt)[=== Aspire Systems], [], align(center, stack(
+          dir: ltr,
+          spacing: 5pt,
+          image("icons/geo-alt.svg", width: 11pt),
+          align(horizon)[Gdańsk, Poland]
+        )),
+        [], [], [],
+        [Engineer], [], [01.2024 -- now],
+        [Associate Engineer], [], [10.2022 -- 12.2023],
+        [Trainee], [], [07.2022 -- 09.2022]
+      )
+
+      - Developed new features and fixed bugs for SaaS product in the beauty industry. Worked on .NET Framework and .NET Core backend services, as  well as Angular and AngularJS frontend applications.
+      - Worked on features which integrated tightly with Azure's ecosystem, including Azure Web Services, Azure Functions, Azure Service Bus, Azure SQL and Azure Blob Storage. Had also a chance to work on Azure Kubernetes Service (AKS) and Azure DevOps.
+      - Helped with introductions and onboarding of new team members, as well as with the development of internal tools and processes. Participated in code reviews and pair programming sessions. Refactored and improved existing codebase as well as documentation and internal tooling.
+      - Showed initiative in improving the development processes by streamlining the processess required to deploy new database migrations, migrating the frontend project to vite, reducing the friction in the frontend development process and improving the CI/CD pipeline.
+      - Took part in the internal technical presentation meetings both as a listener and as a presenter. Given a presentations on DevOps related topics like "Kubernetes" or "FluxCD" based on my personall experiences with those technologies.
+    ]
+
+    == Education
+
+    #pad(top: 5pt)[
+      === BSc in Computer Science
+      Gdańsk University of Technology \
+      2022 -- now
+    ]
+
+    == Achievements
+
+    #pad(top: 5pt)[
+      === Aspire Systems - Rookie of the Year 2023 award
+
+      Awarded for outstanding performance and dedication during the first year of employment at Aspire Systems. Recognized for technical skills, teamwork and initiative in improving the development processes.
+    ]
+
+    #pad(top: 5pt)[
+      === HackHeroes 2020 - 2nd place
+
+      Coordinated a team of four in building the JedzenioPlanner project for the HackHeroes 2020 hackathon. Assembled the team, divided tasks, and co-developed the back-end. Secured second place among a record number of competitors from all over Poland.
+    ]
+
+    == Certifications
+
+    #pad(top: 5pt)[
+      === Microsoft Certified: Azure Fundamentals (AZ-900)
+      Microsoft, May 2024
+    ]
+
+    #pad(top: 5pt)[
+      === FCE (First Certificate in English) - C1
+      Cambridge Assessment English, June 2021
+    ]
   ],
+  [],
   [
-    #education()
-    #skills()
-    #interests()
+    == Skills
+
+    === Backend Development
+
+    - Professional Experience with: .NET (C\#, ASP.NET Core, Entity Framework), SQL (MSSQL, Azure SQL)
+    - Familiar with: rust, node.js (TypeScript), Java (Spring Boot), Python
+    - Good theoretical and practical knowledge of software architecture, design patterns, cloud computing and best practices in software development
+
+    === Frontend Development
+
+    - Professional Experience with: Angular, AngularJS
+    - Familiar with: React, Svelte, Astro
+    - Good knowledge of HTML, CSS, TailwindCSS, TypeScript, modern web development practices and basics of UX/UI design
+
+    === Cloud & DevOps
+
+    - Cloud Platforms: Microsoft Azure (Web Apps, Blob Storage, Service Bus, CosmosDB, etc.)
+    - Containerization & Orchestration: Docker, Kubernetes (self-hosted RKE2, AKS), Helm, FluxCD
+    - Infrastructure as Code & Automation: Ansible, Terraform, Bash, PowerShell, Python
+    - CI/CD & Workflow Automation: Azure DevOps, GitHub with GitHub Actions
+
+    === Languages
+
+    - Polish (native)
+    - English (C1)
+    - German (Basic)
+
+    == Interests
+
+    Homelabs and self-hosting, Meetups and conferences, Computer Games, Gym, Cars
   ]
 )
 
-#footer()
+#align(bottom+center, text(size: 8pt, weight: "light")[I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process.])
