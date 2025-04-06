@@ -1,6 +1,6 @@
 # Stanisław Nieradko's CV
 
-Repository with my CV and Typst source files.
+Repository with source code for my personal CV template.
 
 ## How to run?
 
