@@ -89,7 +89,7 @@
       [Computer Science - Bachelor of Engineering], [], align(horizon+end, [10.2022 -- now])
     )
 
-    - GPE: 4.4
+    - GPA: 4.4
     - Balanced part-time work (averaging $~30$ hours per week) alongside full-time studies.
 
     == Achievements
