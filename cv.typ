@@ -32,6 +32,8 @@
   #it
 ]
 
+#let text_size = 9pt
+
 /* Helper Functions */
 
 #let header_link(name, href, icon) = link(href, align(horizon, stack(dir: ltr, image(icon, width: 10pt), h(5pt), text(size: 9pt, name))))
@@ -42,7 +44,7 @@
     dir: ttb,
     spacing: 7.5pt,
     [= Stanisław Nieradko],
-    [Full-Stack Software and DevOps Engineer],
+    [Full-Stack .NET Software Engineer with Azure and Kubernetes experience],
     v(10pt),
     stack(
       dir: ltr,
@@ -67,17 +69,26 @@
       columns: (auto, 1fr, auto),
       gutter: 5pt,
       align(horizon, stack(dir: ltr, image("icons/aspire-systems-logo.png", width: 15pt), h(5pt), [=== Aspire Systems])), [], align(horizon+end, stack(dir: ltr, image("icons/geo-alt.svg", width: 10pt), h(5pt), text(size: 9pt, "Gdańsk, Poland"))),
-      [], [], [],
       [Engineer], [], align(horizon+end, [01.2024 -- now]),
       [Associate Engineer], [], align(horizon+end, [10.2022 -- 12.2023]),
       [Trainee], [], align(horizon+end, [07.2022 -- 09.2022])
     )
 
-      - Developed new features and fixed bugs for SaaS product in the beauty industry. Worked on .NET Framework and .NET Core backend services, as  well as Angular and AngularJS frontend applications.
-      - Worked on features which integrated tightly with Azure's ecosystem, including Azure Web Services, Azure Functions, Azure Service Bus, Azure SQL and Azure Blob Storage. Had also a chance to work on features related to Azure Kubernetes Service (AKS) and Azure DevOps configurations.
-      - Helped with introductions and onboarding of new team members, as well as with the development of internal tools and processes. Participated in code reviews and pair programming sessions. Refactored and improved existing codebase as well as documentation and internal tooling.
-      - Showed initiative in improving the development processes by streamlining the processes required to deploy new database migrations, migrating the frontend project to vite, reducing the friction in the frontend development process and improving the CI/CD pipeline.
-      - Took part in the internal technical presentation meetings both as a listener and as a presenter. Given a presentations on DevOps related topics like "Kubernetes" or "FluxCD" based on my personal experiences with those technologies.
+    #text(size: text_size)[
+      - Worked as a main backend developer in a small team maintaining and developing SaaS ERP system for beauty industry. To my responsibilities belonged creating new features, fixing reported bugs and issues, taking care of changing infrastructure related requirements (DevOps) and taking part in other parts of software's development lifecycle.
+      - In work I had an opportunity to deliver solutions to our client's businesss and technical problems, such as:
+        - Implementing new features and fixing issues, such as:
+          - integrating with HubSpot CRM to allow faster client's onboarding
+          - refactoring booking system to allow booking multiple resources at the same time
+          - improving PDF receipts and invoices look and building time
+          - integrating with Kubernetes API to allow custom domains usage for public websites
+          - improving frontend Developer Experience by switching to pnpm, adding cache to Dockerfiles and properly configuring development reverse proxy
+          - refactoring slow performing part of checkout-related hotspot to improve overall systems's performance, 
+          - replacing legacy Azure SDKs with their newer counterparts
+        - Architecting technical solutions from gathered requirements and discussing found issues with clients
+      - Given technical presentations in company-wide knowledge sharing sessions, mostly on DevOps related topics like "The basics of Kubernetes" and "FluxCD introduction"
+      - Actively improved my skills by taking part in internal training meetings, taking part in Gdańsk meetups, learning for and earning company-sponsored Azure certifications
+    ]
 
     == Education
 
@@ -85,12 +96,12 @@
       columns: (auto, 1fr, auto),
       gutter: 5pt,
       align(horizon, stack(dir: ltr, image("icons/gdansk-tech-logo.png", width: 15pt), h(5pt), [=== Gdańsk University of Technology])), [], align(horizon+end, stack(dir: ltr, image("icons/geo-alt.svg", width: 10pt), h(5pt), text(size: 9pt, "Gdańsk, Poland"))),
-      [], [], [],
       [Computer Science - Bachelor of Engineering], [], align(horizon+end, [10.2022 -- now])
     )
 
-    - GPA: 4.4
-    - Balanced part-time work (averaging $~30$ hours per week) alongside full-time studies.
+    #text(size: text_size)[
+      Worked part-time throughout the studies as a software engineer, gaining practical experience in software development and DevOps practices. Currently maintaining a 4.4 GPA.
+    ]
 
     == Achievements
 
@@ -100,7 +111,9 @@
       align(horizon, stack(dir: ltr, image("icons/aspire-systems-logo.png", width: 15pt), h(5pt), [=== Rookie of the Year 2023 award])), [], align(horizon+end, "Aspire Systems")
     )
 
-    Awarded for outstanding performance and dedication during the first year of employment at Aspire Systems. Recognized for technical skills, teamwork and initiative in improving the development processes.
+    #text(size: text_size)[
+      Awarded "Rookie of the Year 2023" award for outstanding performance and contributions to the company in my first year of work.
+    ]
 
     #grid(
       columns: (auto, 1fr, auto),
@@ -108,48 +121,76 @@
       align(horizon, stack(dir: ltr, image("icons/media-30-logo.png", width: 20pt), h(5pt), [=== Second place in HackHeroes 2020 hackathon])), [], align(horizon+end, "Media 3.0 Foundation")
     )
     
-    Coordinated a team of four in building the #link("https://github.com/JedzenioPlanner/JedzenioPlanner")[#text(fill: color.hsl(214.12deg, 100%, 40%))[JedzenioPlanner project]] for the HackHeroes 2020 hackathon for High School students. Assembled the team, divided tasks, and co-developed the back-end. Secured second place among a record number of competitors from all over Poland.
+    #text(size: text_size)[
+      Coordinated a team of four in building the #link("https://github.com/JedzenioPlanner/JedzenioPlanner")[#text(fill: color.hsl(214.12deg, 100%, 40%))[JedzenioPlanner project]] during the HackHeroes 2020 hackathon for High School students. I was responsible for assembling the team, dividing the tasks, and co-developing the back-end. Secured second place among a record number of competitors from all over Poland.
+    ]
 
     == Certifications
 
-    #grid(
-      columns: (auto, 1fr, auto),
-      gutter: 5pt,
-      align(horizon, stack(dir: ltr, image("icons/microsoft-logo.svg", width: 15pt), h(5pt), [=== Microsoft Certified: Azure Database Administrator Associate (DP-300)])), [], align(horizon+end, "May 2025"),
-      align(horizon, stack(dir: ltr, image("icons/microsoft-logo.svg", width: 15pt), h(5pt), [=== Microsoft Certified: DevOps Engineer Expert (AZ-400)])), [], align(horizon+end, "April 2025"),
-      align(horizon, stack(dir: ltr, image("icons/microsoft-logo.svg", width: 15pt), h(5pt), [=== Microsoft Certified: Azure Developer Associate (AZ-204)])), [], align(horizon+end, "March 2025"),
-      align(horizon, stack(dir: ltr, image("icons/cambridge-assesment-logo.png", width: 15pt), h(5pt), [=== FCE (First Certificate in English) - C1])), [], align(horizon+end, "June 2021"),
-    )
+    #text(size: text_size)[
+      #grid(
+        columns: (auto, 1fr, auto),
+        gutter: 5pt,
+        align(horizon, stack(dir: ltr, image("icons/microsoft-logo.svg", width: 13pt), h(5pt), [=== Microsoft Certified: Azure Database Administrator Associate (DP-300)])), [], align(horizon+end, "May 2025"),
+        align(horizon, stack(dir: ltr, image("icons/microsoft-logo.svg", width: 13pt), h(5pt), [=== Microsoft Certified: DevOps Engineer Expert (AZ-400)])), [], align(horizon+end, "April 2025"),
+        align(horizon, stack(dir: ltr, image("icons/microsoft-logo.svg", width: 13pt), h(5pt), [=== Microsoft Certified: Azure Developer Associate (AZ-204)])), [], align(horizon+end, "March 2025"),
+        align(horizon, stack(dir: ltr, image("icons/microsoft-logo.svg", width: 13pt), h(5pt), [=== Microsoft Certified: Azure Fundamentals (AZ-900)])), [], align(horizon+end, "May 2024"),
+        align(horizon, stack(dir: ltr, image("icons/cambridge-assesment-logo.png", width: 13pt), h(5pt), [=== FCE (First Certificate in English) - C1])), [], align(horizon+end, "June 2021"),
+      )
+    ]
   ],
   [
     == Skills
 
     #pad(y: 2.5pt, bottom: -2.5pt, align(horizon, stack(dir: ltr, image("icons/database.svg", width: 10pt), h(5pt), [=== Backend Development])))
-    
-    - Professional Experience with: .NET (C\#, ASP.NET, Entity Framework), SQL (MSSQL, Azure SQL)
-    - Good theoretical and practical knowledge of software architecture, design patterns, cloud computing and best practices in software development
-    - Familiar with: rust, node.js (TypeScript), Java (Spring Boot), Python
+      
+    #text(text_size)[
+      - .NET Framework (ASP.NET, Entity Framework 6)
+      - .NET (ASP.NET Core, Entity Framework Core)
+      - T-SQL (MSSQL, Azure SQL), NoSQL technologies (redis, Azure CosmosDB)
+      - Good knowledge of software architecture, design patterns, automated testing and other theoretical aspects of backend development (DDD, TDD, microservices architecture, CQRS, sharding etc.)
+    ]
 
     #pad(y: 2.5pt, bottom: -2.5pt, align(horizon, stack(dir: ltr, image("icons/table.svg", width: 10pt), h(5pt), [=== Frontend Development])))
 
-    - Professional Experience with: Angular, AngularJS
-    - Non-Professional Experience with: React, Svelte, Astro
-    - Good knowledge of HTML, CSS, TailwindCSS, TypeScript, modern web development practices and basics of UX/UI design
+    #text(text_size)[
+      - AngularJS, Angular, React, Svelte, Astro
+      - HTML, CSS, TypeScript, tailwindCSS, nodeJS
+      - basics of UX/UI design and aesthetics
+    ]
 
     #pad(y: 2.5pt, bottom: -2.5pt, align(horizon, stack(dir: ltr, image("icons/cloud.svg", width: 10pt), h(5pt), [=== Cloud & DevOps])))
 
-    - Professional Experience working with Azure (Web Apps, Blob Storage, Service Bus, CosmosDB, etc.),
-      Docker, Kubernetes (AKS), Azure DevOps pipelines
-    - Non-Professional Experience working with: other cloud platforms (AWS, GCP), self-hosted kubernetes clusters (f.i. RKE2), GitHub with GitHub Actions, Helm, FluxCD, Ansible, Terraform, Bash, PowerShell, Python
+    #text(text_size)[
+      - Docker, Kubernetes (both managed and on-prem, AKS, RKE2), Ansible, Helm, Terraform, FluxCD
+      - Good knowledge of Azure
+      - GitHub, Azure DevOps (GitHub Actions, Azure Pipelines)
+      - Good understanding of servers and their administration (linux based)
+      - Experience in cloud based computing
+    ]
+
+    #pad(y: 2.5pt, bottom: -2.5pt, align(horizon, stack(dir: ltr, image("icons/terminal.svg", width: 10pt), h(5pt), [=== Other])))
+
+    #text(text_size)[
+      - Good knowledge of Linux and Windows operating systems
+      - Scripting in bash, powershell and python
+      - Good understanding of software's development lifecycle
+      - Leadership experience in non-work environments
+      - Quick learner; Able to quickly onboard onto new tech stacks
+    ]
 
     #pad(y: 2.5pt, bottom: -2.5pt, align(horizon, stack(dir: ltr, image("icons/users.svg", width: 10pt), h(5pt), [=== Languages])))
 
-    - Polish (native)
-    - English (C1)
-    - German (Basic)
+    #text(text_size)[
+      - Polish (native)
+      - English (C1)
+      - German (Basic)
+    ]
 
     == Interests & Hobbies
 
-    HomeLabs and self-hosting, Meetups and conferences, Computer Games, Gym, Cars
+    #text(text_size)[
+      Meetups, conferences, Computer Games, Gym, Cars, HomeLabs and self-hosting
+    ]
   ]
 )
