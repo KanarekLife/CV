@@ -135,7 +135,6 @@
         align(horizon, stack(dir: ltr, image("icons/microsoft-certified-associate-badge.svg", width: 15pt), h(5pt), [=== Microsoft Certified: Azure Database Administrator Associate (DP-300)])), [], align(horizon+end, "May 2025"),
         align(horizon, stack(dir: ltr, image("icons/microsoft-certified-expert-badge.svg", width: 15pt), h(5pt), [=== Microsoft Certified: DevOps Engineer Expert (AZ-400)])), [], align(horizon+end, "April 2025"),
         align(horizon, stack(dir: ltr, image("icons/microsoft-certified-associate-badge.svg", width: 15pt), h(5pt), [=== Microsoft Certified: Azure Developer Associate (AZ-204)])), [], align(horizon+end, "March 2025"),
-        align(horizon, stack(dir: ltr, image("icons/microsoft-certified-fundamentals-badge.svg", width: 15pt), h(5pt), [=== Microsoft Certified: Azure Fundamentals (AZ-900)])), [], align(horizon+end, "May 2024"),
         align(horizon, stack(dir: ltr, image("icons/cambridge-assesment-logo.png", width: 15pt), h(5pt), [=== FCE (First Certificate in English) - C1])), [], align(horizon+end, "June 2021"),
       )
     ]
@@ -149,6 +148,7 @@
       - .NET Framework (ASP.NET, Entity Framework 6)
       - .NET (ASP.NET Core, Entity Framework Core)
       - T-SQL (MSSQL, Azure SQL), NoSQL technologies (redis, Azure CosmosDB)
+      - Some experience with NodeJS
       - Good knowledge of software architecture, design patterns, automated testing and other theoretical aspects of backend development (DDD, TDD, microservices architecture, CQRS, sharding etc.)
     ]
 
@@ -156,24 +156,24 @@
 
     #text(text_size)[
       - AngularJS, Angular, React, Svelte, Astro
-      - HTML, CSS, TypeScript, tailwindCSS, nodeJS
-      - basics of UX/UI design and aesthetics
+      - HTML, CSS, TypeScript, tailwindCSS
+      - Basics of UX/UI design and aesthetics
     ]
 
     #pad(y: 2.5pt, bottom: -2.5pt, align(horizon, stack(dir: ltr, image("icons/cloud.svg", width: 10pt), h(5pt), [=== Cloud & DevOps])))
 
     #text(text_size)[
       - Docker, Kubernetes (both managed and on-prem, AKS, RKE2), Ansible, Helm, Terraform, FluxCD
-      - Good knowledge of Azure
+      - Good practical knowledge of Azure
       - GitHub, Azure DevOps (GitHub Actions, Azure Pipelines)
-      - Good understanding of servers and their administration (linux based)
+      - Proficient in Linux server administration
       - Experience in cloud based computing
     ]
 
     #pad(y: 2.5pt, bottom: -2.5pt, align(horizon, stack(dir: ltr, image("icons/terminal.svg", width: 10pt), h(5pt), [=== Other])))
 
     #text(text_size)[
-      - Good knowledge of Linux and Windows operating systems
+      - Proficient in Linux and Windows operating systems administration
       - Scripting in bash, powershell and python
       - Good understanding of software's development lifecycle
       - Leadership experience in non-work environments
@@ -191,7 +191,7 @@
     == Interests & Hobbies
 
     #text(text_size)[
-      Meetups, conferences, Computer Games, Gym, Cars, HomeLabs and self-hosting
+      Meetups, Conferences, Computer Games, Gym, Cars, HomeLabs and self-hosting
     ]
   ]
 )
