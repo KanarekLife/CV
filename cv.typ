@@ -76,7 +76,7 @@
 
     #text(size: text_size)[
       - Worked as a main backend developer in a small team maintaining and developing SaaS ERP system for beauty industry. To my responsibilities belonged creating new features, fixing reported bugs and issues, taking care of changing infrastructure related requirements (DevOps) and taking part in other parts of software's development lifecycle.
-      - In work I had an opportunity to deliver solutions to our client's businesss and technical problems, such as:
+      - In work I had an opportunity to deliver solutions to our client's business and technical problems, such as:
         - Implementing new features and fixing issues, such as:
           - integrating with HubSpot CRM to allow faster client's onboarding
           - refactoring booking system to allow booking multiple resources at the same time
