@@ -132,10 +132,10 @@
         columns: (auto, 1fr, auto),
         gutter: 5pt,
                 align(horizon, stack(dir: ltr, image("icons/microsoft-certified-expert-badge.svg", width: 15pt), h(5pt), [=== Microsoft Certified: DevOps Engineer Expert (AZ-400)])), [], align(horizon+end, "April 2025"),
-        align(horizon, stack(dir: ltr, image("icons/microsoft-certified-specialty-badge.svg", width: 15pt), h(5pt), [=== Microsoft Certified: Azure Cosmos DB Developer Specialty (DP-420)])), [], align(horizon+end, "June 2025"),
+        align(horizon, stack(dir: ltr, image("icons/microsoft-certified-associate-badge.svg", width: 15pt), h(5pt), [=== Microsoft Certified: Azure Administrator Associate (AZ-104)])), [], align(horizon+end, "July 2025"),
+        align(horizon, stack(dir: ltr, image("icons/microsoft-certified-associate-badge.svg", width: 15pt), h(5pt), [=== Microsoft Certified: Azure Developer Associate (AZ-204)])), [], align(horizon+end, "March 2025"),
         align(horizon, stack(dir: ltr, image("icons/microsoft-certified-associate-badge.svg", width: 15pt), h(5pt), [=== Microsoft Certified: Azure AI Engineer Associate (AI-102)])), [], align(horizon+end, "June 2025"),
         align(horizon, stack(dir: ltr, image("icons/microsoft-certified-associate-badge.svg", width: 15pt), h(5pt), [=== Microsoft Certified: Azure Database Administrator Associate (DP-300)])), [], align(horizon+end, "May 2025"),
-        align(horizon, stack(dir: ltr, image("icons/microsoft-certified-associate-badge.svg", width: 15pt), h(5pt), [=== Microsoft Certified: Azure Developer Associate (AZ-204)])), [], align(horizon+end, "March 2025"),
         align(horizon, stack(dir: ltr, image("icons/cambridge-assesment-logo.png", width: 15pt), h(5pt), [=== FCE (First Certificate in English) - C1])), [], align(horizon+end, "June 2021"),
       )
     ]
@@ -165,7 +165,7 @@
 
     #text(text_size)[
       - Docker, Kubernetes (both managed and on-prem, AKS, RKE2), Ansible, Helm, Terraform, FluxCD
-      - Good practical knowledge of Azure
+      - Good knowledge of Azure
       - GitHub, Azure DevOps (GitHub Actions, Azure Pipelines)
       - Proficient in Linux server administration
       - Experience in cloud based computing
